@@ -46,7 +46,9 @@ class _HomescreenState extends State<Homescreen> {
         itemCount: imageUrls.length,
               itemBuilder: (context, index) {
                 // image network will help us to convert link to renderabe widget
-                return Image.network(imageUrls[index]);
+                return GridTile(
+                 
+                  child: Image.network(imageUrls[index],fit: BoxFit.cover,),);
               },)
     );
   }
